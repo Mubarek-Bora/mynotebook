@@ -1,15 +1,15 @@
 from functools import lru_cache
 
-from sentence_transformers import SentenceTransformer
+from fastembed import TextEmbedding
 
-MODEL_NAME = "all-MiniLM-L6-v2"
+MODEL_NAME = "BAAI/bge-small-en-v1.5"  # 384-dim, ONNX runtime -- no PyTorch needed
 
 
 @lru_cache
-def _model() -> SentenceTransformer:
-    return SentenceTransformer(MODEL_NAME)
+def _model() -> TextEmbedding:
+    return TextEmbedding(model_name=MODEL_NAME)
 
 
 def embed(text: str) -> list[float]:
-    vector = _model().encode(text, normalize_embeddings=True)
+    vector = next(_model().embed([text]))
     return vector.tolist()
