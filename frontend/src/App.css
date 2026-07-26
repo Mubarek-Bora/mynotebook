@@ -78,6 +78,16 @@
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
 }
 
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark--center {
+  justify-content: center;
+}
+
 .auth-card .brand {
   font-size: 28px;
   color: var(--ink);
@@ -130,6 +140,8 @@
   gap: 24px;
   flex-wrap: wrap;
   margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-inverse);
 }
 
 .topbar .brand {
@@ -334,4 +346,42 @@
   .topbar__user {
     justify-content: space-between;
   }
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  max-width: 980px;
+  margin: 48px auto 0;
+  padding: 24px 24px 32px;
+  border-top: 1px solid var(--border-inverse);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.site-footer__links {
+  display: flex;
+  gap: 14px;
+}
+
+.site-footer__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-inverse);
+  color: var(--ink-inverse);
+}
+.site-footer__icon:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.site-footer__text {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted-inverse);
 }
