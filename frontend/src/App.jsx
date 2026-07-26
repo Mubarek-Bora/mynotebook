@@ -104,7 +104,7 @@ function App() {
   return (
     <div className="app-shell">
       <header className="topbar">
-        <h1 className="brand">Second Brain</h1>
+        <h1 className="brand">MyNotebook</h1>
         <form className="search-form" onSubmit={handleSearch}>
           <input
             type="search"

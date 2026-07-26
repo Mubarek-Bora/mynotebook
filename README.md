@@ -1,4 +1,4 @@
-# Second Brain
+# MyNotebook
 
 An AI-powered personal notes app: write notes, search them by meaning (not just keywords) via vector embeddings, and get one-click AI summaries.
 

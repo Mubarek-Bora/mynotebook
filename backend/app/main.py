@@ -5,7 +5,7 @@ from .config import settings
 from .database import init_db
 from .routers import auth, notes
 
-app = FastAPI(title="Second Brain API")
+app = FastAPI(title="MyNotebook API")
 
 app.add_middleware(
     CORSMiddleware,

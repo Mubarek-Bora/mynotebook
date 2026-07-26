@@ -26,7 +26,7 @@ export default function AuthForm({ onAuthed }) {
   return (
     <div className="auth-shell">
       <div className="auth-card">
-        <h1 className="brand">Second Brain</h1>
+        <h1 className="brand">MyNotebook</h1>
         <p className="tagline">Write it down. Find it by meaning, not just keywords.</p>
 
         <form onSubmit={handleSubmit}>
