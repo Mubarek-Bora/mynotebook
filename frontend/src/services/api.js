@@ -1,4 +1,6 @@
-const API_URL = import.meta.env.VITE_API_URL;
+// Falls back to same-origin (empty string) when unset, which is correct for
+// production where the frontend and backend are deployed as one Vercel project.
+const API_URL = import.meta.env.VITE_API_URL || "";
 
 function authHeaders(token) {
   return token ? { Authorization: `Bearer ${token}` } : {};
